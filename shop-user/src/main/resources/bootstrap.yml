@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: server-user
+  cloud:
+    nacos:
+      config:
+        server-addr: 192.168.117.10:8848
+        file-extension: yaml
+        group: user_group
+        shared-configs[0]:
+          data_id: server-all.yaml
+          group: all_group
+          refresh: true
+        username: nacos
+        password: nacos
+  profiles:
+    active: dev
